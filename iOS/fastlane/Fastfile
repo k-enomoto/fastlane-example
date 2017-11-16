@@ -60,10 +60,10 @@ platform :ios do
     gym
 
     # Save ipa and dSYM
-    if is_ci?
-      sh "cp #{lane_context[SharedValues::IPA_OUTPUT_PATH]} $CIRCLE_ARTIFACTS"
-      sh "cp #{lane_context[SharedValues::DSYM_OUTPUT_PATH]} $CIRCLE_ARTIFACTS"
-    end
+#    if is_ci?
+#      sh "cp #{lane_context[SharedValues::IPA_OUTPUT_PATH]} $CIRCLE_ARTIFACTS"
+#      sh "cp #{lane_context[SharedValues::DSYM_OUTPUT_PATH]} $CIRCLE_ARTIFACTS"
+#    end
 
     # Upload ipa to crashslytics
     crashlytics(
